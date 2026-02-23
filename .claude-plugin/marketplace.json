@@ -3,10 +3,14 @@
     "owner": {
       "name": "Agent Kanban Team"
     },
+    "metadata": {
+      "description": "The Agent-Kanban official plugin market, which includes plugins collected or developed by the publishing platform.",
+      "version": "1.0.0"
+    },
     "plugins": [
       {
         "name": "cc-kanban-dev",
-        "source": "./plugins/cc-kanban-dev",
+        "source": "./plugins/development/cc-kanban-dev",
         "description": "CC-Kanban 项目开发工具集，包含前端、UI/UX、测试等技能和代理"
       }
     ]
