@@ -1,0 +1,13 @@
+{
+    "name": "agnet-kanban-marketplace",
+    "owner": {
+      "name": "Agent Kanban Team"
+    },
+    "plugins": [
+      {
+        "name": "cc-kanban-dev",
+        "source": "./plugins/cc-kanban-dev",
+        "description": "CC-Kanban 项目开发工具集，包含前端、UI/UX、测试等技能和代理"
+      }
+    ]
+  }

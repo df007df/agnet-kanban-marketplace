@@ -1,0 +1,36 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"文件已修改: ${CLAUDE_PLUGIN_ROOT}/hooks/log-edit.sh '${tool_input.file_path}'\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash.*git commit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "command": "检查提交信息是否规范。\n\n提交的文件:\n$ARGUMENTS\n\n请确认提交信息格式清晰，包含变更原因。"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"欢迎使用 CC-Kanban 开发环境!\""
+          }
+        ]
+      }
+    ]
+  }
+}
